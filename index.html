@@ -18,20 +18,20 @@
   >
     <main class="font-poppins">
       <!-- home section -->
-      <section
-        class="game-home min-h-screen text-white flex justify-center items-center hidden"
+      <section id="home-screen"
+        class="game-home min-h-screen text-white flex justify-center items-center"
       >
         <div class="flex flex-col items-center space-y-8">
           <h1 class="text-8xl font-anton uppercase">Alphabet Clash</h1>
           <p class="font-medium">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
-          <button class="btn bg-white text-black">Play Now</button>
+          <buttonb onclick="play()" class="btn bg-white text-black">Play Now</button>
         </div>
       </section>
 
       <!-- playgorund section -->
-      <section class="game-playground flex flex-col gap-10 pt-16 items-center hidden">
+      <section id="playground-screen" class="game-playground flex flex-col gap-10 pt-16 items-center hidden">
       <!-- screen -->
       <div
         class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]"
@@ -99,7 +99,7 @@
           </button>
       </div>
     </section>
-      <section class="game-score flex items-center justify-center min-h-screen">
+      <section class="game-score flex items-center justify-center min-h-screen hidden">
         <div class="text-white text-center space-y-5 bg-[#ffffff33] p-8 rounded-2xl">
             <h1 class="text-6xl">
                 <span class="font-extrabold">Score: </span>
@@ -110,5 +110,8 @@
         </div>
       </section>
     </main>
+
+    <!-- scripts -->
+    <script src="scripts/alpha-clash.js"></script>
   </body>
 </html>
