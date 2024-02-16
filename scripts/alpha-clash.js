@@ -1,7 +1,11 @@
 
 const handleKeyboardKeyUp = (event) => {
     const playerPressed = event.key;
-    console.log('player pressed', playerPressed)
+
+    // stop the game if palyer press Escape
+    if(playerPressed === 'Escape'){
+        gameOver()
+    }
     
     // get the expected key to press
     const currentAlphabetElement = document.getElementById('current-alphabet')
@@ -71,4 +75,8 @@ const gameOver = () => {
     showSectionById('game-end', 'hidden')
     const totalScore = getScoreById('score');
     setScoreById('total-score', totalScore);
+
+    // clear the last higlighted key
+    const alphabet = document.getElementById('current-alphabet');
+    removeBackgroundColorById(alphabet.innerText)
 }
