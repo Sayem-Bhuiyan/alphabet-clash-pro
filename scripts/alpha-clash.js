@@ -32,6 +32,9 @@ const handleKeyboardKeyUp = (event) => {
         const currentLife = getScoreById('current-life');
         const newLife = currentLife - 1;
         setScoreById('current-life' ,newLife)
+        if(newLife === 0){
+           gameOver()
+        }
     }
 }
 document.addEventListener('keyup', handleKeyboardKeyUp)
@@ -50,7 +53,22 @@ const continueGame = () => {
 }
 
 const play = () => {
+    // hide everything only show play ground
     hideElementById('home-screen', 'hidden')
     showSectionById('playground-screen', 'hidden');
+    hideElementById('game-end', 'hidden')
+
+    // set score and life to the default
+    setScoreById('current-life',  5)
+    setScoreById('score', 0)
+    
+    // continue the game
     continueGame();
+}
+
+const gameOver = () => {
+    hideElementById('playground-screen', 'hidden')
+    showSectionById('game-end', 'hidden')
+    const totalScore = getScoreById('score');
+    setScoreById('total-score', totalScore);
 }

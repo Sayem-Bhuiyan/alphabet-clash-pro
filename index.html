@@ -26,7 +26,7 @@
           <p class="font-medium">
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
-          <buttonb onclick="play()" class="btn bg-white text-black">Play Now</button>
+          <button onclick="play()" class="btn bg-white text-black">Play Now</button>
         </div>
       </section>
 
@@ -99,13 +99,14 @@
           </button>
       </div>
     </section>
-      <section class="game-score flex items-center justify-center min-h-screen hidden">
+      <section id="game-end" class="game-score flex items-center justify-center min-h-screen hidden">
         <div class="text-white text-center space-y-5 bg-[#ffffff33] p-8 rounded-2xl">
+            <h1 class="text-4xl">Game Over !</h1>
             <h1 class="text-6xl">
                 <span class="font-extrabold">Score: </span>
-                <span>14</span>
+                <span id="total-score">0</span>
             </h1>
-            <button class="btn bg-white text-black text-xl">Play Again</button>
+            <button onclick="play()" class="btn bg-white text-black text-xl">Play Again</button>
             <p class="text-xl font-medium">Practice will make you Pro</p>
         </div>
       </section>
