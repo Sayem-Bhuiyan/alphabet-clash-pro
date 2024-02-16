@@ -2,7 +2,7 @@
 const handleKeyboardKeyUp = (event) => {
     const playerPressed = event.key;
 
-    // stop the game if palyer press Escape
+    // stop the game if palyer press Escapej
     if(playerPressed === 'Escape'){
         gameOver()
     }
