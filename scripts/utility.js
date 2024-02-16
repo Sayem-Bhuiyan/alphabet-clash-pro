@@ -15,6 +15,24 @@ const setBackgroundColor = (elementId) => {
     element.classList.add('bg-[#FFA500]')
 }
 
+const removeBackgroundColorById = (elementId) => {
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-[#FFA500]')
+}
+
+const getScoreById = (elementId) => {
+    const element = document.getElementById(elementId);
+    const elementText = element.innerText;
+    const elementScore = parseInt(elementText)
+
+    return elementScore;
+}
+
+const setScoreById = (elementId, score) => {
+    const element = document.getElementById(elementId);
+    element.innerText = score;
+}
+
 const getRandomAlphabet = () => {
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     const alpahabets = alphabetString.split('');
